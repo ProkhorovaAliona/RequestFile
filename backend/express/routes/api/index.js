@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const jsonData = require('./test.json');
 
 router.get('/getTest', function(req, res, next) {
-    res.json({
-        'status': 'OK'
-    })
+    res.send(jsonData);
 });
 
+console.log(jsonData.file);
 module.exports = router;

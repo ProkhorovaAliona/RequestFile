@@ -18,6 +18,7 @@ module.exports = () => ({
       target: 'http://localhost:5000',
       ws: true,
     },
-    '/upload/*': 'http://localhost:3000', // папка аплоада на сервере
+    '/upload/*': 'http://localhost:5000', // папка аплоада на сервере
+    '/api/getTest' : 'http://localhost:4000'
   },
 });
