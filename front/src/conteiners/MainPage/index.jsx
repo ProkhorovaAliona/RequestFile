@@ -12,7 +12,7 @@ class MainPage extends Component {
       <div className={style.test}>
         <header>
           <img src = {image} />
-          <h1> Load the Date from JSON </h1>
+          <h1> Load the Date from JSON file </h1>
         </header>
       </div>
     );
