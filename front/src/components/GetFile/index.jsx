@@ -16,7 +16,7 @@ class GetFile extends Component {
       getData() {
         fetch('http://localhost:5000/api/getTest')
         .then(results => results.json())
-        .then(results => console.log(results))
+        //.then(results => console.log(results))
         .then((results) => {
             this.setState({
                 data: results,
@@ -26,9 +26,14 @@ class GetFile extends Component {
 
       render() {
         if (!this.state.data) return (<p> Loading ...</p>);
+        const { data } = this.state;
         return (
           <div>
-            <h2>1 {this.state.data} </h2>
+              {Object.keys(data).map(key => (
+                <div key={key}>
+                    {key} : {data[key]}
+                </div>
+              ))}
           </div>
         );
       }
